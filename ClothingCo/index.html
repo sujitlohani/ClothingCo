@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Brand</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Navbar  -->
+    <nav class="navbar">
+      <div class="brand">ClothingCo</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="images/your-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-highlight">Discover</span> Your Style
+      </h1>
+      <p class="hero-description">Unleash the trendsetter in you with our latest collection.</p>
+      <div class="hero-actions">
+        <input type="text" id="user-name" placeholder="Enter your name" class="hero-input" />
+        <a href="shop.html" class="btn btn-primary" onclick="storeUserName()">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 ClothingCo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function storeUserName() {
+        const userName = document.getElementById('user-name').value.trim();
+        if (userName) {
+            localStorage.setItem('currentUser', userName);
+        } else {
+            alert('Please enter your name before proceeding.');
+        }
+    }
+</script>
+
+</body>
+</html>
